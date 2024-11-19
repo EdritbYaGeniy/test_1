@@ -18,7 +18,7 @@
 }
 
 $db = new WorkingTemplate();
-$db->connect('localhost', 'postgres', '1111', 'test', '5432');
+$db->connect('localhost', 'username', 'pass', 'dbname', 'port');
 $pdo = $db->connectToDB();
 ```
 
@@ -45,7 +45,7 @@ $stmt = $pdo->prepare("CREATE TABLE IF NOT EXISTS Products (
 class CProducts {
     private $pdo;
 
-    public function __construct($host, $dbname, $user, $password, $port = '5432') {
+    public function __construct($host, $dbname, $user, $password, $port = 'port') {
         $this->pdo = new PDO("pgsql:host=$host;dbname=$dbname;port=$port", $user, $password);
         $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     }
@@ -81,9 +81,9 @@ class CProducts {
 require 'get_Products.php';
 
 $host = 'localhost';
-$dbname = 'test';
-$user = 'postgres';
-$password = '1111';
+$dbname = 'dbname';
+$user = 'username';
+$password = 'pass';
 
 $products = new CProducts($host, $dbname, $user, $password);
 $items = $products->getProducts(10); 
