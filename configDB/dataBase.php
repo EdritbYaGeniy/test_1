@@ -14,7 +14,7 @@ class WorkingTemplate implements PdoDB
 
     public function connect($host, $user, $password, $databaseName, $port)
     {
-        $this->host = $host; 
+        $this->host = $host;
         $this->user = $user; 
         $this->password = $password; 
         $this->databaseName = $databaseName; 

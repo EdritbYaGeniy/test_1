@@ -26,5 +26,5 @@ class CProducts {
         $stmt->bindParam(':productId', $productId, PDO::PARAM_INT);
         return $stmt->execute();
     }
-}
+}""
 ?>

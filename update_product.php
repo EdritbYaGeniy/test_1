@@ -15,5 +15,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $result = $products->updateProductQuantity($productId, $quantity);
     
     echo json_encode(['success' => $result]);
-}
+}""
 ?>

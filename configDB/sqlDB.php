@@ -1,4 +1,4 @@
-<?php
+<?php 
 require 'dataBase.php';
 
 $db = new WorkingTemplate();
@@ -25,5 +25,5 @@ if ($pdo) {
         echo "Ошибка при создании таблицы: " . $e->getMessage();
     }
 } else {
-    echo "Ошибка подключения к базе данных.";
+    echo "Ошибка подключения к базе данных..";
 }
